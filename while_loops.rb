@@ -176,19 +176,50 @@
 # puts reverse("bootcamp")     # => "pmactoob"
 
 
-def is_palindrome(word)
-  palindrome_backward = ''
-  i = 0
+# def is_palindrome(word)
+#   palindrome_backward = ''
+#   i = 0
   
+#   while i < word.length
+#     palindrome_backward = word[i] + palindrome_backward
+#     i += 1
+    
+#   end
+    
+#     return word == palindrome_backward
+# end
+
+# puts is_palindrome("racecar")  # => true
+# puts is_palindrome("kayak")    # => true
+# puts is_palindrome("bootcamp") # => false
+
+
+'''
+Vowel Filter
+
+remove every vowel in a string if its index is odd
+'''
+
+def vowel_filter(word)
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  result = ''
+
+  i = 0
+
   while i < word.length
-    palindrome_backward = word[i] + palindrome_backward
+    char = word[i]
+
+    unless i.odd? && vowels.include?(char)
+      result << char
+      # puts char + i.to_s
+    end
+    
     i += 1
-    
   end
-    
-    return word == palindrome_backward
+
+  return result
 end
 
-puts is_palindrome("racecar")  # => true
-puts is_palindrome("kayak")    # => true
-puts is_palindrome("bootcamp") # => false
+puts vowel_filter('banana')
+puts vowel_filter('Stamina')
+puts vowel_filter('aardvank')
