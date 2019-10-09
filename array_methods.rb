@@ -38,7 +38,7 @@ string = 'programming'
 # puts string.index('gram')
 
 # reverse --> evaluates to a newer version of the array or a string
-# reverse! --> reverses an array or strung in place
+# reverse! --> reverses an array or string in place
 
 # students_array.reverse
 # print students_array
@@ -96,7 +96,7 @@ string = 'follow the yellow car to the end'
 # puts
 
 # word = string.split(' ')
-# puts word[2]
+# puts word
 # # print string.split('the')
 # # # It will split the string at 'the'
 # # puts
